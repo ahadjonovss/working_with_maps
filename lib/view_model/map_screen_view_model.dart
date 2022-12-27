@@ -1,0 +1,3 @@
+class MapScreenViewModel extends ChangeNotifier{
+
+}

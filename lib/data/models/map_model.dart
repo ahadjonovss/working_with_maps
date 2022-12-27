@@ -1,15 +1,15 @@
 // To parse this JSON data, do
 //
 //     final locationModel = locationModelFromJson(jsonString);
-class LocationModel {
-  LocationModel({
+class Geocoding {
+  Geocoding({
     this.response,
   });
 
-  Response? response;
+  MyResponse? response;
 
-  factory LocationModel.fromJson(Map<String, dynamic> json) => LocationModel(
-    response: Response.fromJson(json["response"]),
+  factory Geocoding.fromJson(Map<String, dynamic> json) => Geocoding(
+    response: MyResponse.fromJson(json["response"]),
   );
 
   Map<String, dynamic> toJson() => {
@@ -17,14 +17,14 @@ class LocationModel {
   };
 }
 
-class Response {
-  Response({
+class MyResponse {
+  MyResponse({
     this.geoObjectCollection,
   });
 
   GeoObjectCollection? geoObjectCollection;
 
-  factory Response.fromJson(Map<String, dynamic> json) => Response(
+  factory MyResponse.fromJson(Map<String, dynamic> json) => MyResponse(
     geoObjectCollection: GeoObjectCollection.fromJson(json["GeoObjectCollection"]),
   );
 
