@@ -1,13 +1,6 @@
 // To parse this JSON data, do
 //
 //     final locationModel = locationModelFromJson(jsonString);
-
-import 'dart:convert';
-
-LocationModel locationModelFromJson(String str) => LocationModel.fromJson(json.decode(str));
-
-String locationModelToJson(LocationModel data) => json.encode(data.toJson());
-
 class LocationModel {
   LocationModel({
     this.response,
