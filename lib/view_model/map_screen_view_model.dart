@@ -9,11 +9,10 @@ class MapScreenViewModel extends ChangeNotifier{
   final GeocodingRepo geocodingRepo;
 
   String addressText = "";
+  String choosenCategory="House";
 
   fetchAddress({required LatLong latLong, required String kind}) async {
-    print("CAME1");
-    addressText = await geocodingRepo.getAddress(latLong, kind);
-    print("CAM2");
+    addressText = await geocodingRepo.getAddress(latLong, choosenCategory);
     notifyListeners();
   }
 }

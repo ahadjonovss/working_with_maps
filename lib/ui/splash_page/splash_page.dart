@@ -13,7 +13,9 @@ class SplashScreen extends StatelessWidget {
         child: Consumer<SplashViewModel>(
           builder: (context, value, child) {
             if(value.latLong!=null){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>MapScreen()));
+              WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>MapScreen()),(route) => false,);
+              });
             }
             return FlutterLogo(size: 20,);
           },

@@ -23,7 +23,6 @@ class ApiService {
         'rspn': '1',
         'results': '1',
       };
-      debugPrint("QueryParams>>>>>>>>>>$queryParams");
       response = await dio.get(
         "https://geocode-maps.yandex.ru/1.x/",
         queryParameters: queryParams,
