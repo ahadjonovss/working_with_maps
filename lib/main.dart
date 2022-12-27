@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:working_with_maps/ui/splash_page/splash_page.dart';
+import 'package:working_with_maps/view_model/splash_view_model.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_)=>SplashViewModel())
+    ],
+
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
