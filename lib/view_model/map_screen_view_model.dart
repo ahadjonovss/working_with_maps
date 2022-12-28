@@ -11,6 +11,8 @@ class MapScreenViewModel extends ChangeNotifier{
   String addressText = "";
   String choosenCategory="House";
 
+
+
   fetchAddress({required LatLong latLong, required String kind}) async {
     addressText = await geocodingRepo.getAddress(latLong, choosenCategory);
     notifyListeners();
